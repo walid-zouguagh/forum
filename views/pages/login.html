@@ -1,0 +1,21 @@
+{{define "style"}}
+<link rel="stylesheet" href="/static/styles/login.css" />
+{{end}} {{define "title"}}Login{{end}} {{define "content"}}
+
+<div class="form">
+  <h1 class="minititle">Log In</h1>
+  <form method="post" action="/login" onsubmit="validlogin(event)">
+    <label class="lbl" for="Email">Email</label>
+    <input class="impt" type="text" id="email" name="email" />
+    <p id="erroremail"></p>
+
+    <label class="lbl" for="password">password</label>
+    <input class="impt" type="password" id="password" name="password" />
+    <p id="errorPassword"></p>
+
+    <button type="submit" class="submit">submit</button><br />
+  </form>
+</div>
+{{end}} {{define "script"}}
+<script src="/static/scripts/login.js"></script>
+{{end}}

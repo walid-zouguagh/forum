@@ -1,0 +1,38 @@
+{{define "style"}}
+<link rel="stylesheet" href="/static/styles/poststyle.css" />
+<link rel="stylesheet" href="/static/styles/home.css" />
+{{end}} {{define "title"}}Forum{{end}} {{define "content"}}
+<nav id="filter">
+  <ul id="categories">
+    {{if .}}
+    <li><a class="category" href="/liked-post">Liked posts</a></li>
+    {{end}}
+  </ul>
+</nav>
+<div class="lay-out"></div>
+{{if .}}
+<button class="show-postForm"><img src="/static/images/add.png" /></button>
+<form id="postForm" class="postForm">
+  <label class="create_Post" for="post">Create Post:</label>
+  <input
+    class="title_inpt"
+    type="text"
+    id="post"
+    name="title"
+    placeholder="Post Title"
+    required
+  />
+  <p id="errorTitle"></p>
+  <textarea class="post_contant" name="content" id="content"></textarea>
+  <p id="errorContent"></p>
+
+  <div id="category"></div>
+  <p id="errorcategory"></p>
+
+  <button type="submit" class="submit">Submit</button><br />
+</form>
+{{end}}
+<section id="posts-container"></section>
+{{end}} {{define "script"}}
+<script type="module" src="/static/scripts/profile.js"></script>
+{{end}}

@@ -1,0 +1,393 @@
+body{
+  overflow: scroll;
+}
+
+.logo {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.logolink {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 200ms ease-in-out;
+}
+
+.logolink:hover {
+  color: var(--link-color);
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .navlinks {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  transition: color 200ms ease-in-out;
+}
+
+.navbar .navlinks:hover {
+  color: var(--link-color);
+}
+
+.greeting {
+  text-align: center;
+  padding: 150px 20px 25px;
+  font-size: 1.5rem;
+}
+
+.title {
+  width: 100%;
+  align-self: self-start;
+  word-wrap: break-word;
+  font-size: 20px;
+}
+
+.post-container {
+  background-color: var(--post-background);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  margin: 20px auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.post-container .pc {
+  position: relative;
+  border-radius: 8px;
+  padding: 3% 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.post-container .pc::before,
+.post-container .pc::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  border-top: 1px solid rgb(92, 92, 92);
+}
+
+.post-container .pc::before {
+  top: 0;
+}
+
+.post-container .pc::after {
+  bottom: 0;
+}
+
+.poster {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0 0 10px;
+  color: var(--text-color);
+}
+
+.poster img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.like-dislike-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.like-btn,
+.dislike-btn,
+.like-btn-comment,
+.dislike-btn-comment {
+  font-size: 18px;
+  width: 35px;
+  padding-top: 5px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 200ms ease-in-out;
+}
+
+.like-btn:hover,
+.like-btn-comment:hover {
+  background-color: var(--like-hover);
+}
+
+.dislike-btn:hover,
+.dislike-btn-comment:hover {
+  background-color: var(--dislike-hover);
+}
+
+.liked {
+  background-color: var(--like-hover);
+}
+
+.disliked {
+  background-color: var(--dislike-hover);
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.see_comments {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+.comment_form {
+  width: 90%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.comment {
+  flex: 1;
+  height: 30px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.send_comment {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 200ms ease-in-out;
+}
+
+.send_comment:hover {
+  background-color: #6287d577;
+}
+
+.sendimg {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+}
+
+.postForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  z-index: 10;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.show-postForm {
+  background: none;
+  border: none;
+  position: fixed;
+  top: 150px;
+  right: 80px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.show-postForm img {
+  width: 40px;
+  height: 40px;
+}
+
+.lay-out {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.title_inpt {
+  height: 30px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.create_Post {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.post_contant {
+  height: 90px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.catLabel {
+  padding-left: 5px;
+}
+
+.creationdate {
+  text-align: end;
+}
+
+.categories {
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+@media (max-width: 1024px) {
+  .post-container {
+    width: 80%;
+  }
+
+  .greeting {
+    padding: 120px 20px 25px;
+  }
+
+  .postForm {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #posts-container {
+    padding-top: 200px;
+  }
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .post-container {
+    width: 90%;
+  }
+
+  .greeting {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  #posts-container {
+    padding-top: 200px;
+  }
+  .show-postForm {
+    top: 120px;
+    right: 25px;
+  }
+  .greeting {
+    padding-top: 150px;
+    font-size: 1rem;
+  }
+
+  .post-container {
+    width: 95%;
+  }
+
+  .comment {
+    height: 25px;
+    font-size: 0.9rem;
+  }
+
+  .likeNbr,
+  .dislikeNbr {
+    padding-top: 2.5%;
+    padding-left: 2px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+
+  .like-btn,
+  .dislike-btn,
+  .like-btn-comment,
+  .dislike-btn-comment {
+    font-size: 16px;
+  }
+}
+
+.commentHe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commentC {
+  display: block;
+  height: auto;
+  margin: 2%;
+  border-bottom: 1px solid black;
+}
+
+.commentp {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  height: auto;
+}
+
+.divcomments {
+  display: none;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: rgba(235, 235, 235, 0.767);
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+
+.image{
+  width: 100%;
+  height: 5%;
+}

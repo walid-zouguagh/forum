@@ -1,0 +1,10 @@
+{{define "comment_form"}}
+<h4>Comment Form</h4>
+<form action="/api/1/comment/new" method="post">
+    <div class="field-input">
+        <label for="comment">Comment</label>
+        <input type="text" name="comment" id="comment">
+    </div>
+    <button type="submit">SEND</button>
+</form>
+{{end}}

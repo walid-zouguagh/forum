@@ -1,0 +1,24 @@
+{{define "style"}}
+<link rel="stylesheet" href="/static/styles/login.css" />
+{{end}} {{define "title"}}Create Post{{end}} {{define "content"}}
+
+<div class="form">
+  <h1 class="minititle">create Post</h1>
+  <form id="postForm">
+    <label for="Title">Title</label>
+    <input type="text" name="Title" id="Title" /><br />
+    <p id="errorTitle"></p>
+
+    <label for="Content">Content</label>
+    <input type="text" name="Content" id="Content" /><br />
+    <p id="errorContent"></p>
+
+    <div id="category"></div>
+    <p id="errorcategory"></p>
+
+    <button id="submit" class="submit">Submit</button><br />
+  </form>
+</div>
+{{end}} {{define "script"}}
+<script type="module" src="/static/scripts/PostCategory.js"></script>
+{{end}}

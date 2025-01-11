@@ -1,0 +1,93 @@
+.form {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+form {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.minititle {
+  text-align: center;
+}
+
+.lbl {
+  align-self: flex-start;
+  font-size: 25px;
+  color: #2867c5;
+  display: block;
+}
+
+.impt {
+  height: 40px;
+  width: 100%;
+  border: #2867c5 solid 1px;
+  border-radius: 25px;
+  padding: 10px 4%;
+  font-size: 1.2rem;
+}
+
+.submit {
+  border: 1px solid #ccc;
+  font-size: 25px;
+  outline: none;
+  padding: 2%;
+  margin: 0 35%;
+  border-radius: 25px;
+  background-color: rgb(37, 132, 221);
+  padding: 2% 7%;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.logolink {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 200ms ease-in-out;
+}
+
+.logolink:hover {
+  color: var(--link-color);
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .navlinks {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  transition: color 200ms ease-in-out;
+}
+
+.navbar .navlinks:hover {
+  color: var(--link-color);
+}
